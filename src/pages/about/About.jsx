@@ -1,13 +1,12 @@
 // About.js
 
 
-const About = () => {
+function About() {
   return (
     <div>
-      <h1>À propos de nous</h1>
-      {/* Contenu de la page À propos */}
+      <h1>Bievenue sur à propos</h1>
     </div>
   );
-};
+}
 
 export default About;

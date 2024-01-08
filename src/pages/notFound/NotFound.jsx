@@ -1,11 +1,12 @@
 // NotFound.js
 
-const NotFound = () => {
+
+function NotFound() {
   return (
     <div>
-      <h1>Page non trouvée</h1>
+      <h1>Bienvenue sur NotFound</h1>
     </div>
   );
-};
+}
 
-export default NotFound;
+export default NotFound
