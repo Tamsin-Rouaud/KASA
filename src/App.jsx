@@ -1,17 +1,14 @@
+// App.js
 
-import './App.sass'
+import AppRouter from './Router';
+import './App.sass'; // Assurez-vous d'importer votre fichier Sass ici
 
-function App() {
-  
-
+const App = () => {
   return (
-    
-      <div>
-        <p> Hello world</p>
-      </div>
-      
-    
-  )
-}
+    <div className="app">
+      <AppRouter />
+    </div>
+  );
+};
 
-export default App
+export default App;
