@@ -1,10 +1,15 @@
 // NotFound.js
-
+import Header from "../../components/header/Header";
+import Footer from "../../components/footer/Footer";
+import Error from "../../components/error/Error";
 
 function NotFound() {
   return (
     <div>
-      <h1>Bienvenue sur NotFound</h1>
+      <Header />
+      <Error />
+      <Footer />
+      
     </div>
   );
 }

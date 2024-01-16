@@ -1,20 +1,25 @@
 // Router.js
 
-import { BrowserRouter as Routes, Route } from "react-router-dom";
-import Home from "./pages/Home"; // Importez vos différentes pages
-import About from "./pages/About";
-import NotFound from "./pages/NotFound";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home/Home.jsx";
+import About from "./pages/About/About.jsx";
+import NotFound from "./pages/NotFound/NotFound.jsx";
+// import ForRent from "./pages/ForRent/ForRent.jsx";
 
-const AppRouter = () => {
+function AppRouter() {
   return (
-    <Routes>
-      
-        <Route path="/" exact component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="*" component={NotFound} />
-      
-    </Routes>
+    <div className="AppRouter">
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/About" element={<About/>} />
+        {/* <Route path="/ForRent/:id" element={<ForRent/>}  /> */}
+        <Route path="*" element={<NotFound/>} />
+
+      </Routes>
+    </Router>
+    </div>
   );
-};
+}
 
 export default AppRouter;

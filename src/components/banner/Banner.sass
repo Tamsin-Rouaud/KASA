@@ -1,0 +1,33 @@
+$imgHomeBanner: '/homeBanner.png'
+$imgAboutBanner: '/aboutBanner.png'
+
+@mixin banner-logo-style($backgroundImage)
+    position: relative
+    width: 100%
+    height: 209px
+    background-image: url('#{$backgroundImage}')
+    object-fit: cover
+    background-position: center center
+    background-repeat: no-repeat
+    border-radius: 25px
+    background-color: black
+    filter: brightness(0.7)
+    overflow: hidden
+.banner
+    width: 86%
+    position: relative
+    border-radius: 25px
+    padding-bottom: 50px
+    &__logo
+        @include banner-logo-style($backgroundImage:$imgAboutBanner )
+        position: relative
+        z-index: 1
+    &__title
+        color: white
+        font-size: 40px
+        font-weight: 400
+        position: absolute
+        bottom: 100px
+        left: 50%
+        transform: translateX(-50%) // Centre horizontalement
+        z-index: 1
