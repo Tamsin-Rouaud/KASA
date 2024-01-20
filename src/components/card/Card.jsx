@@ -1,30 +1,25 @@
-// Card.jsx
-
-import PropTypes from 'prop-types';
 import './Card.sass';
+import jsonData from '../../data/logements.json'
+import { Link } from 'react-router-dom';
 
-const Card = ({ data }) => {
+
+const Card = () => {
     return (
-        <div className='card-container'>
-            {data.map(cardData => (
-                <div key={cardData.id} className='card'>
-                    <img className='card__image' src={cardData.cover} alt={`Couverture de ${cardData.title}`} />
-                    <h2 className='card__title'>{cardData.title}</h2>
-                </div>
-            ))}
-        </div>
-    );
-};
+        <ul className='card-container'>
+            {jsonData.map(cardList => (
 
-Card.propTypes = {
-    data: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.string.isRequired,
-            cover: PropTypes.string.isRequired,
-            title: PropTypes.string.isRequired,
-            // ... autres propriétés
-        })
-    ).isRequired
+                    <li className='card' key={cardList.id}>
+                         <Link to={`/ForRent/${cardList.id}`}>
+                        <img src={cardList.cover} alt={`Couverture de ${cardList.title}`} className="card__image" />
+                        <figcaption className='card__title'>{cardList.title}</figcaption>
+                        </Link>
+
+                    </li>
+                
+            ))}
+            
+        </ul>
+    );
 };
 
 export default Card;

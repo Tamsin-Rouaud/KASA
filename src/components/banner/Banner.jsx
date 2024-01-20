@@ -1,6 +1,5 @@
-
 import './Banner.sass'
-import PropTypes from 'prop-types';
+
 
 
 const Banner = ({backgroundImage, title}) => {
@@ -12,23 +11,5 @@ const Banner = ({backgroundImage, title}) => {
     );
 };
 
-Banner.propTypes = {
-    backgroundImage:PropTypes.string.isRequired,
-    title:PropTypes.string.isRequired
-}
-
-
-
-
-
-
-
-// const Banner = () => {
-//     return (
-//         <div className='banner'>
-//             <img className='banner__logo' />
-//         </div>
-//     );
-// };
 
 export default Banner;
