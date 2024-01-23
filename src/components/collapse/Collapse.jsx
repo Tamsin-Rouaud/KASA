@@ -1,7 +1,7 @@
 import './Collapse.sass';
 import { useState } from 'react';
 import arrowBack from '../../assets/images/arrowBack.png'
-// import PropTypes from 'prop-types'
+
 
 const Collapse = ({ title, content}) => {
   const [isCollapsed, setCollapsed] = useState(true);

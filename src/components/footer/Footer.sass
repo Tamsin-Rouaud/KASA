@@ -1,16 +1,13 @@
-
-.footer__container
-    background: black
+.footer
+    width: 100%
+    height: 209px
+    background-color: #000
     display: flex
-    flex-direction: column
+    justify-content: center
     align-items: center
-    width: 1440px
-    margin-top: 20px
-    padding-top: 66px
-    padding-bottom: 29px
-.footer__logo
-    object-fit: contain
-    max-height: 36px
-    padding-top: 30px
-.footer__content
-    color: white
+    flex-direction: column
+    margin-top: 40px
+    @media (max-width:768px)
+        margin-top: 5px
+    &__content
+        color: white

@@ -1,8 +1,4 @@
 import AppRouter from './Router.jsx';
-import './App.sass';
-
-
-
 
 const App = () => {
   return (

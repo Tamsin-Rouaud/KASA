@@ -3,32 +3,41 @@
     margin-top: 10px
     &__header
         display: flex
-        width: 1023px
-
+        margin: 0 auto
         justify-content: space-between
         align-items: center
-        background-color: #ff6060 /* Couleur du rectangle rouge */
-        color: #fff /* Couleur du texte */
+        background-color: #ff6060
+        color: #fff 
         padding: 10px
         border-radius: 5px
-
+        @media (max-width:768px)
+            height: 30px
+            padding-top: 0
+            padding-bottom: 0
     &__title
         color: #fff
-        font-size: 24px
+        font-size: 1.5em
+        @media (max-width:768px)
+            font-size: 1em
     &__content
         background-color: #f6f6f6
-        width: 1023px
         border-radius: 5px
         color: #ff6060
-        font-size: 18px
+        font-size: 1.1em
         padding-top: 20px
         padding-bottom: 20px
         padding-left: 20px
+        @media (max-width:768px)
+            font-size: 0.8em
     &__arrow
-        &--up
-            transition-duration: 500ms
-            transform: rotate(0.5turn)
         &--down
             transition-duration: 500ms
+            transform: rotate(0.5turn)
+            @media (max-width:768px)
+                height: 30px
+        &--up
+            transition-duration: 500ms
             transform: rotate(0turn)
+            @media (max-width:768px)
+                height: 30px
             

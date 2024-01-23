@@ -18,16 +18,25 @@ $imgAboutBanner: '/aboutBanner.png'
     position: relative
     border-radius: 25px
     padding-bottom: 50px
+    @media ( max-width: 768px )
+        padding-bottom: 20px
+        width: 93%
     &__logo
         @include banner-logo-style($backgroundImage:$imgAboutBanner )
         position: relative
         z-index: 1
+        @media ( max-width: 768px )
+            height: 111px
     &__title
         color: white
-        font-size: 40px
-        font-weight: 400
+        font-size: 2.6em
+        font-weight: 500
         position: absolute
-        bottom: 100px
+        bottom: 25%
         left: 50%
         transform: translateX(-50%) // Centre horizontalement
         z-index: 1
+        @media ( max-width: 768px )
+            font-size: 1.5em
+            left: 37%
+            font-weight: 400

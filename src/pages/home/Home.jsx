@@ -9,7 +9,7 @@ import Card from "../../components/card/Card";
 
  function Home() {
   
-  const text ='Chez vous, et partout ailleurs'
+  const text ='Chez vous, partout et ailleurs'
   
   return (
     <div className="home__container">

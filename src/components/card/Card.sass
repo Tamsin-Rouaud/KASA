@@ -1,41 +1,59 @@
 .card-container
-    display: flex
-    flex-wrap: wrap
-    // width: 86%
-    width: 1229px
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr))
+    gap: 10px 10px
+    width: 83%
     border-radius: 25px
     background-color: #F6F6F6
-    justify-content: space-between
+    padding-left: 25px
+    padding-right: 35px
     padding-top: 40px
-    padding-right: 50
-    
+    margin: 0
+    @media (max-width : 768px)
+        display: flex
+        justify-content: center
+        flex-direction: column
+        padding-left: 0
+        padding-right: 0
+        width: 93%
+        gap: 0
+        padding-top: 0
+        padding-bottom: 10px
+        background: #fff
 .card
     display: flex
     flex-direction: column
     border-radius: 10px
-    width: 340px
-    height: 340px
+    width: 87%
+    height: 88.5%
     position: relative
     overflow: hidden
     margin-bottom: 40px
     padding-left: 33px
     padding-right: 33px
-    
+    @media (max-width : 768px)
+        width: 100%
+        height: 85%
+        padding-left: 0
+        padding-right: 0
+        margin-bottom: 20px
     &__image
         width: 100%
         height: 340px
         object-fit: cover
         border-radius: 10px
         cursor: pointer
+        @media (max-width : 768px)
+            height: 255px
     &__title
         position: absolute
         bottom: 0
         left: 0
         width: 80%
         padding: 20px
-        font-size: 18px
+        font-size: 1.3em
         color: white
         margin-left: 20px
-ul
-    margin: 0
-    padding: 0
+        @media (max-width : 768px)
+            margin-left: 0
+

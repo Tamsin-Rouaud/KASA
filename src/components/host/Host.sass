@@ -1,36 +1,55 @@
 .host__container
     display: flex
     flex-direction: column
-  
-    width:196px
-
+    width:16%
+    @media (max-width:768px)
+        width: 100%
+        flex-direction: row-reverse
 .host__idBlock
     display: flex
     flex-direction: row
-    width:196px
+    width:95%
     margin-bottom: 15px
-
+    @media (max-width:768px)
+        justify-content: flex-end
+        width: 50%
+        align-items: center
 .host__image
         border-radius: 50px
-        width: 64px
-        height: 64px
+        width: 33%
+        height: 80%
         display: flex
         justify-content: flex-end
+        @media (max-width:768px)
+            width: 19.15%
+            height: 58%
 .host__identity
     display: flex
     justify-content: flex-end
     color: #ff6060
-    font-size: 18px
+    font-size: 1.2em
     margin-right: 15px
     text-align: right
+    @media (max-width:768px)
+        width: 25%
+        font-size: 0.8em
 .host__ratingContainer
-    width: 196px
+    width: 100%
     display: flex
     justify-content: flex-end
-
+    @media (max-width:768px)
+        width: 50%
+        align-items: center
+        justify-content: flex-start
 .star
-    width: 34px
+    width: 17%
     margin-left: 10px
+    @media (max-width:768px)
+        height: 20%
+        width: 8%
+        margin-left: 5px
+
+
 
 
 

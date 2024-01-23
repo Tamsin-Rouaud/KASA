@@ -9,7 +9,6 @@ import Collapse from "../../components/collapse/Collapse";
 
 function About() {
 
-  // const arrow = arrowBack;
   const backgroundImage = aboutBanner;
   const collapseDatas = [
     {

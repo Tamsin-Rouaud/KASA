@@ -1,5 +1,4 @@
 import './Gallery.sass'
-
 import SlideShow from '../slideShow/SlideShow'
 
 const Gallery = ({ card }) => {
