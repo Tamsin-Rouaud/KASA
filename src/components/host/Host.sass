@@ -1,55 +1,57 @@
 .host__container
     display: flex
     flex-direction: column
-    width:16%
+    width: 16%
     @media (max-width:768px)
         width: 100%
         flex-direction: row-reverse
-.host__idBlock
+.hostIdBlock
     display: flex
     flex-direction: row
-    width:95%
+    justify-content: flex-end
     margin-bottom: 15px
     @media (max-width:768px)
         justify-content: flex-end
         width: 50%
         align-items: center
-.host__image
-        border-radius: 50px
-        width: 33%
-        height: 80%
+    &__firstName
+            margin-bottom: 5px
+    &__identity
+        display: flex
+        margin-top: 0
+        margin-bottom: 0
+        justify-content: space-evenly
+        color: #ff6060
+        font-size: 1.3em
+        font-weight: 500
+        margin-right: 15px
+        text-align: right
+        flex-direction: column
+        @media (max-width:768px)
+            // width: 25%
+            font-size: 0.8em
+
+    &__image
+        border-radius: 50%
+        width: 64px
+        height: 64px
         display: flex
         justify-content: flex-end
         @media (max-width:768px)
-            width: 19.15%
-            height: 58%
-.host__identity
-    display: flex
-    justify-content: flex-end
-    color: #ff6060
-    font-size: 1.2em
-    margin-right: 15px
-    text-align: right
-    @media (max-width:768px)
-        width: 25%
-        font-size: 0.8em
-.host__ratingContainer
-    width: 100%
-    display: flex
-    justify-content: flex-end
-    @media (max-width:768px)
-        width: 50%
-        align-items: center
-        justify-content: flex-start
-.star
-    width: 17%
-    margin-left: 10px
-    @media (max-width:768px)
-        height: 20%
-        width: 8%
-        margin-left: 5px
-
-
-
-
-
+            width: 32px
+            height: 32px
+    &__ratingContainer
+        width: 100%
+        display: flex
+        justify-content: flex-end
+        @media (max-width:768px)
+            width: 50%
+            align-items: center
+            justify-content: flex-start
+        &--star
+            width: 17%
+            margin-left: 10px
+            @media (max-width:768px)
+                height: 20%
+                width: 8%
+                margin-left: 5px

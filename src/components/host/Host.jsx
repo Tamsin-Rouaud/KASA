@@ -1,44 +1,34 @@
-import { useParams } from 'react-router-dom';
-import jsonData from '../../data/logements.json';
-import starGrey from     '../../assets/images/starGrey.png' 
-import starRed from '../../assets/images/starRed.png'
+
+import starGrey from '../../assets/images/starGrey.png';
+import starRed from '../../assets/images/starRed.png';
 import './Host.sass';
 
-const Host = () => {
-  const { id } = useParams();
+const Host = ({ card }) => {
+  const rating = parseInt(card.rating, 10);
 
-  const foundCard = jsonData.find((item) => item.id.toString() === id);
-
-  if (!foundCard) {
-    return <p>Logement introuvable</p>;
-  }
-
-  const generateRatingStars = (rating) => {
-    const stars = [];
-    const activeStar = starRed;
-    const inactiveStar = starGrey;
-
-    for (let i = 1; i <= 5; i++) {
-      stars.push(
-        <img
-          key={i}
-          className="star"
-          src={i <= rating ? activeStar : inactiveStar}
-          alt={`Star ${i}`}
-        />
-      );
-    }
-    return stars;
-  };
+  // Divise la chaîne 'name' en prénom et nom
+  const [firstName, lastName] = card.host.name.split(' ');
 
   return (
-    <div key={foundCard.id} className='host__container'>
-      <div className='host__idBlock'>
-        <p className='host__identity'>{foundCard.host.name}</p>
-        <img className='host__image' src={foundCard.host.picture} alt={`photo of ${foundCard.host.name}`} />
+    <div key={card.id} className='host__container'>
+      <div className='hostIdBlock'>
+        {/* Utilise les variables firstName et lastName */}
+        <p className='hostIdBlock__identity'>
+          <span className='hostIdBlock__firstName'>{firstName}</span>
+          
+          <span className='hostIdBlock__lastName'>{lastName}</span>
+        </p>
+        <img className='hostIdBlock__image' src={card.host.picture} alt={`photo of ${card.host.name}`} />
       </div>
-      <div className="host__ratingContainer">
-        {generateRatingStars(foundCard.rating)}
+      <div className="hostIdBlock__ratingContainer">
+        {[...Array(5)].map((_, i) => (
+          <img
+            key={i + 1}
+            className="hostIdBlock__ratingContainer--star"
+            src={i < rating ? starRed : starGrey}
+            alt={`Star ${i + 1}`}
+          />
+        ))}
       </div>
     </div>
   );

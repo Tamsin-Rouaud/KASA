@@ -4,7 +4,8 @@ import Footer from "../../components/footer/Footer";
 import Banner from "../../components/banner/Banner";
 import './Home.sass';
 import homeBanner from '/homeBanner.png';
-import Card from "../../components/card/Card";
+// import Card from "../../components/card/Card";
+import Gallery from "../../components/gallery/Gallery";
 
 
  function Home() {
@@ -15,7 +16,7 @@ import Card from "../../components/card/Card";
     <div className="home__container">
       <Header/>
       <Banner backgroundImage={homeBanner} title={text}/>
-      <Card  />
+      <Gallery  />
       <Footer/>
     </div>
   );

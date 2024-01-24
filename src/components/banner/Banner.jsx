@@ -1,7 +1,5 @@
 import './Banner.sass'
 
-
-
 const Banner = ({backgroundImage, title}) => {
     return (
         <div className="banner">

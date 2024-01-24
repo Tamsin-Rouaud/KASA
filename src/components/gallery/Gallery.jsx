@@ -1,14 +1,15 @@
-import './Gallery.sass'
-import SlideShow from '../slideShow/SlideShow'
 
-const Gallery = ({ card }) => {
-    return (
-        <div className='gallery'>
-                      
-                <SlideShow pictures={card.pictures} />
-            
-        </div>
-    );
+import Card from '../card/Card'; // Utilise le composant Card pour afficher les cartes
+import jsonData from '../../data/logements.json';
+
+const Gallery = () => {
+  return (
+    <ul className='card-container'>
+      {jsonData.map(card => (
+        <Card key={card.id} card={card} />
+      ))}
+    </ul>
+  );
 };
 
 export default Gallery;
