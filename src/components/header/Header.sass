@@ -1,3 +1,5 @@
+@import '../../../styles-mixins'
+    
 .header
     display: flex
     justify-content: space-between
@@ -19,7 +21,7 @@
             max-width: 40%
     &__link
         text-decoration: none
-        color: #ff6060
+        @include text-red
         font-weight: 500
         font-size: 1.5em
         @media ( max-width: 768px  )

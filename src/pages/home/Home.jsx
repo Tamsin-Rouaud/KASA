@@ -4,7 +4,6 @@ import Footer from "../../components/footer/Footer";
 import Banner from "../../components/banner/Banner";
 import './Home.sass';
 import homeBanner from '/homeBanner.png';
-// import Card from "../../components/card/Card";
 import Gallery from "../../components/gallery/Gallery";
 
 

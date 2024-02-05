@@ -13,3 +13,8 @@ const Gallery = () => {
 };
 
 export default Gallery;
+
+//  Le composant Gallery fonctionne comme un conteneur dynamique qui affiche les 
+//  cards générées à partir des données JSON. Chaque carte de logement est rendue en utilisant 
+//  le composant Card, ce qui permet une mise en page modulaire et réutilisable 
+//  pour chaque logement dans la galerie.

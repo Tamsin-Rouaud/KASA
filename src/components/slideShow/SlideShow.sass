@@ -1,3 +1,5 @@
+@import '../../../styles-mixins'
+    
 .slideshow
     position: relative
     width: 100%
@@ -8,6 +10,7 @@
         object-fit: cover
         @media (max-width:768px)
             height: 255px
+            border-radius: 10px
     &__arrow
         position: absolute
         top: 40%
@@ -34,7 +37,7 @@
         top: 165px
         left: 45%
         font-size: 18px
-        color: white
+        @include text-white
         font-weight: 500
         @media (max-width:768px)
             display: none

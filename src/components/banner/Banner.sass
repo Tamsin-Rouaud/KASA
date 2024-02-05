@@ -1,43 +1,34 @@
-$imgHomeBanner: '/homeBanner.png'
-$imgAboutBanner: '/aboutBanner.png'
-
-@mixin banner-logo-style($backgroundImage)
-    position: relative
-    width: 100%
-    height: 209px
-    background-image: url('#{$backgroundImage}')
-    object-fit: cover
-    background-position: center center
-    background-repeat: no-repeat
-    border-radius: 25px
-    background-color: black
-    filter: brightness(0.7)
-    overflow: hidden
+@import '../../../styles-mixins'
+    
 .banner
     width: 86%
     position: relative
-    border-radius: 25px
     padding-bottom: 50px
-    @media ( max-width: 768px )
+    @media (max-width: 768px)
         padding-bottom: 20px
         width: 90%
     &__logo
-        @include banner-logo-style($backgroundImage:$imgAboutBanner )
-        position: relative
-        z-index: 1
-        @media ( max-width: 768px )
+        width: 100%
+        height: 209px
+        object-fit: cover
+        border-radius: 25px
+        filter: brightness(0.7)
+        @media (max-width: 768px)
             height: 111px
+            border-radius: 10px
     &__title
-        color: white
+        @include text-white
         font-size: 2.6em
         font-weight: 500
         position: absolute
         bottom: 38%
         left: 25%
-        z-index: 1
-        @media ( max-width: 768px )
-            font-size: 1.5em
+        @media (max-width: 768px)
+            font-size: 1.4em
             left: 7%
+            bottom: 25%
+            width: 60%
             font-weight: 400
-            width:64.5%
-            bottom:25%
+            
+
+        

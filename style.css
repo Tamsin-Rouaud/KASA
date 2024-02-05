@@ -5,3 +5,9 @@ body {
     max-width: 1440px;
     font-family: Montserrat, Verdana, Geneva, Tahoma, sans-serif
 }
+
+@media (max-width :768px){
+    body{
+        padding-top: 20px;
+    }
+}
