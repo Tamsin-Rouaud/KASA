@@ -1,13 +1,13 @@
 body {
-    margin: 0px auto;
-    padding: 0px;
-    padding-top: 45px;
-    max-width: 1440px;
-    font-family: Montserrat, Verdana, Geneva, Tahoma, sans-serif
+	margin: 0px auto;
+	padding: 0px;
+	padding-top: 45px;
+	max-width: 1440px;
+	font-family: Montserrat, Verdana, Geneva, Tahoma, sans-serif;
 }
 
-@media (max-width :768px){
-    body{
-        padding-top: 20px;
-    }
+@media (max-width: 768px) {
+	body {
+		padding-top: 20px;
+	}
 }

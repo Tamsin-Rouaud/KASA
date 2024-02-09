@@ -1,33 +1,31 @@
 import './Collapse.sass';
 import { useState } from 'react';
-import arrowBack from '../../assets/images/arrowBack.png';
+import arrow from '../../assets/images/arrow.png';
 
 const Collapse = ({ title, content }) => {
-  const [isCollapsed, setCollapsed] = useState(true);
-  const arrow = arrowBack;
+	// Paramétrage de l'état local de mon composant en définissant mon useState à true
+	const [isCollapsed, setCollapsed] = useState(true);
 
-  const toggleCollapse = () => {
-    setCollapsed(!isCollapsed);
-  };
+	const toggleCollapse = () => {
+		setCollapsed(!isCollapsed);
+	};
 
-  return (
-    <div className={`collapse${isCollapsed ? '__closed' : ''}`}>
-      <div className="collapse__header" onClick={toggleCollapse}>
-        <span className="collapse__title">{title}</span>
-        <img
-          className={`collapse__arrow${isCollapsed ? '--up' : '--down'}`}
-          src={arrow}
-          alt='Voir le contenu'
-        />
-      </div>
+	return (
+		<div className='collapse'>
+			<div className='collapse__header' onClick={toggleCollapse}>
+				<span className='collapse__title'>{title}</span>
+				<img
+					className={`collapse__arrow${isCollapsed ? '--up' : '--down'}`}
+					src={arrow}
+					alt='Voir le contenu'
+				/>
+			</div>
 
-      <div className={`collapse__container__content${isCollapsed ? '--hidden' : ''}`}>
-        <div className="collapse__container__content--text">
-          {content}
-        </div>
-      </div>
-    </div>
-  );
+			<div className={`collapse__text${isCollapsed ? '--hidden' : ''}`}>
+				<div>{content}</div>
+			</div>
+		</div>
+	);
 };
 
 export default Collapse;
