@@ -24,6 +24,10 @@ const Host = ({ card }) => {
 				/>
 			</div>
 			<div className='hostIdBlock__ratingContainer'>
+				{/* Utilisation de la méthode map pour créer un tableau contenant 5 éléments
+				Tant que i est inférieure à la valeur de rating, une star red sera ajouté
+				si i est égale ou supérieur à la valeur de rating, dans ce cas une star grey viendra 
+				complété le tableau. */}
 				{[...Array(5)].map((_, i) => (
 					<img
 						key={i + 1}

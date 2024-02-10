@@ -3,7 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import './Header.sass';
 
 const Header = () => {
-	// Utilisation de useLocation pour obtenir l'objet location qui contient des informations sur l'URL actuelle.
+	// Utilisation de useLocation pour obtenir l'objet location qui contient des informations sur l'URL actuelle afin de lui attribuer une classe
+	// pour lui attribuer ou non un underline en fontion de la page active.
 	const location = useLocation();
 
 	return (

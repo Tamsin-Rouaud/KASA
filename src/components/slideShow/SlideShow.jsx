@@ -60,3 +60,9 @@ const SlideShow = ({ pictures }) => {
 };
 
 export default SlideShow;
+
+// Rend le composant SlideShow en fonction des images passées en props.
+// Si pictures a plus d'une image, affiche l'image actuelle et les flèches 
+// de navigation. Sinon, rend simplement l'image.
+// Les flèches de navigation permettent de passer à l'image précédente ou 
+// suivante, et elles affichent également le numéro de l'image actuelle sur le nombre total d'images.

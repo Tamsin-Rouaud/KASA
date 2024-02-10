@@ -1,7 +1,6 @@
 @import '../../../styles-mixins'
 
 .collapse
-    margin-bottom: 10px
     &__header
         @include background-red
         @include text-white
@@ -9,18 +8,14 @@
         margin: 0 auto
         justify-content: space-between
         align-items: center
-        padding: 10px
+        padding: 10px 20px
         border-radius: 10px
-        position: relative // Ajout de la ligne pour permettre l'utilisation de z-index
+        position: relative 
         z-index: 2
-        width: 95%
+        width: 93%
         @media (max-width:768px)
-            height: 30px
-            padding-top: 0
-            padding-bottom: 0
             border-radius: 5px
-            width: 95%
-
+            width: 88%
     &__title
         @include text-white
         font-size: 1.2em
@@ -30,26 +25,34 @@
         @include background-grey
         @include text-red
         border-radius: 5px
+        width: 93%
         padding: 20px
+        margin: 5px auto
+        list-style: none
+        margin-bottom: 10px
         font-size: 1.1em
-        position: relative // Ajout de la ligne pour permettre l'utilisation de z-index
+        position: relative 
         z-index: 1
         max-height: 500px
         overflow: visible
         opacity: 1
-        transform: translateY(0px)
         transition-property: max-height, opacity, overflow, transform
         transition-duration: 1s
         @media (max-width:768px)
             font-size: 0.8em 
-            transform: translateY(0px)
+            padding: 10px
+            margin-bottom: 10px
         &--hidden
             @include background-grey
             border-radius: 5px
             @include text-red
-            position: relative // Ajout de la ligne pour permettre l'utilisation de z-index
+            position: relative 
+            list-style: none
             z-index: 1
-            padding: 20px 0px 0 20px
+            width: 93%
+            padding: 20px
+            margin: 0 auto
+            font-size: 1.1em
             max-height: 0px
             overflow: hidden
             opacity: 0
@@ -59,6 +62,7 @@
             @media (max-width:768px)
                 font-size: 0.8em
                 transform: translateY(-50px)
+                padding: 10px  
     &__arrow
         &--down
             @include arrow(-0.5turn)
