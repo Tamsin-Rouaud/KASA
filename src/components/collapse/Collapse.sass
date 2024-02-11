@@ -23,46 +23,46 @@
             font-size: 1em
     &__text
         @include background-grey
-        @include text-red
         border-radius: 5px
+        @include text-red
+        position: relative 
+        list-style: none
+        z-index: 1
         width: 93%
         padding: 20px
-        margin: 5px auto
-        list-style: none
-        margin-bottom: 10px
+        margin: 0 auto
         font-size: 1.1em
-        position: relative 
-        z-index: 1
-        max-height: 500px
-        overflow: visible
-        opacity: 1
+        max-height: 0px
+        overflow: hidden
+        opacity: 0
+        transform: translateY(-100px)
         transition-property: max-height, opacity, overflow, transform
         transition-duration: 1s
         @media (max-width:768px)
-            font-size: 0.8em 
-            padding: 10px
-            margin-bottom: 10px
-        &--hidden
+            font-size: 0.8em
+            transform: translateY(-50px)
+            padding: 10px  
+        &--hidden    
             @include background-grey
-            border-radius: 5px
             @include text-red
-            position: relative 
-            list-style: none
-            z-index: 1
+            border-radius: 5px
             width: 93%
             padding: 20px
-            margin: 0 auto
+            margin: 5px auto
+            list-style: none
+            margin-bottom: 10px
             font-size: 1.1em
-            max-height: 0px
-            overflow: hidden
-            opacity: 0
-            transform: translateY(-100px)
+            position: relative 
+            z-index: 1
+            max-height: 500px
+            overflow: visible
+            opacity: 1
             transition-property: max-height, opacity, overflow, transform
             transition-duration: 1s
             @media (max-width:768px)
-                font-size: 0.8em
-                transform: translateY(-50px)
-                padding: 10px  
+                font-size: 0.8em 
+                padding: 10px
+                margin-bottom: 10px
     &__arrow
         &--down
             @include arrow(-0.5turn)

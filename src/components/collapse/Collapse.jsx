@@ -21,7 +21,7 @@ const Collapse = ({ title, content }) => {
 				/>
 			</div>
 
-			<div className={`collapse__text${isCollapsed ? '--hidden' : ''}`}>
+			<div className={`collapse__text${isCollapsed ? '' : '--hidden'}`}>
 				<div>{content}</div>
 			</div>
 		</div>
