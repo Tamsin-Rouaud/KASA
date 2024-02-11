@@ -5,8 +5,9 @@ import Banner from '../../components/banner/Banner';
 import aboutBanner from '/aboutBanner.png';
 import Collapse from '../../components/collapse/Collapse';
 
-function About() {
+const About = () => {
 	const backgroundImage = aboutBanner;
+	// Création d'un tableau collapseDatas qui contient les valeurs retournés par les collapses de la page About
 	const collapseDatas = [
 		{
 			id: '1',

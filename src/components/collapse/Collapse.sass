@@ -33,14 +33,13 @@
         margin: 0 auto
         font-size: 1.1em
         max-height: 0px
-        overflow: hidden
         opacity: 0
-        transform: translateY(-100px)
-        transition-property: max-height, opacity, overflow, transform
-        transition-duration: 1s
+        transform: translateY(-100px) // Positionnement du début du paragraphe
+        transition-property: max-height, opacity, transform // Propriété concerné par la transition
+        transition-duration: 1s // Durée de la transition
         @media (max-width:768px)
             font-size: 0.8em
-            transform: translateY(-50px)
+            transform: translateY(-50px)// Positionnement du début du paragraphe
             padding: 10px  
         &--hidden    
             @include background-grey
@@ -55,10 +54,9 @@
             position: relative 
             z-index: 1
             max-height: 500px
-            overflow: visible
             opacity: 1
-            transition-property: max-height, opacity, overflow, transform
-            transition-duration: 1s
+            transition-property: max-height, opacity, transform // Propriété concerné par la transition
+            transition-duration: 1s // Durée de la transition
             @media (max-width:768px)
                 font-size: 0.8em 
                 padding: 10px

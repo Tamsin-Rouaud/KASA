@@ -5,7 +5,7 @@ import './Home.sass';
 import homeBanner from '/homeBanner.png';
 import Gallery from '../../components/gallery/Gallery';
 
-function Home() {
+const Home = () => {
 	const text = 'Chez vous, partout et ailleurs';
 
 	return (
@@ -16,6 +16,6 @@ function Home() {
 			<Footer />
 		</div>
 	);
-}
+};
 
 export default Home;

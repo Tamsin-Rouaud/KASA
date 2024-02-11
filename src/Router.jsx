@@ -9,7 +9,7 @@ import NotFound from './pages/NotFound/NotFound.jsx';
 import ForRent from './pages/ForRent/ForRent.jsx';
 
 // Définition de mon composant AppRouter encapsulant la configuration de mon routeur
-function AppRouter() {
+const AppRouter = () => {
 	return (
 		
 		<div className='AppRouter'>

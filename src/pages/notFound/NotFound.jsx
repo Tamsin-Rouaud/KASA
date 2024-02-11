@@ -4,7 +4,7 @@ import Footer from '../../components/footer/Footer';
 import Error from '../../components/error/Error';
 import './NotFound.sass';
 
-function NotFound() {
+const NotFound = () => {
 	return (
 		<div className='error__container'>
 			<Header />

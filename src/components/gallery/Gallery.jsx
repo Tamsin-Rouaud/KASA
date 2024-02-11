@@ -1,5 +1,8 @@
-import Card from '../card/Card'; // Utilise le composant Card pour afficher les cartes
+import Card from '../card/Card'; 
 import jsonData from '../../data/logements.json';
+
+/* Le composant Gallery est retourné dans un élément <ul> et sert de conteneur affichant les cards. Chaque card sera rendue en utilisant 
+la méthode.map() pour itérer au travers de nos données JSON permettant une mise en page modulaire et réutilisable pour chaque logement de la galerie.*/
 
 const Gallery = () => {
 	return (
@@ -13,7 +16,3 @@ const Gallery = () => {
 
 export default Gallery;
 
-//  Le composant Gallery fonctionne comme un conteneur dynamique qui affiche les
-//  cards générées à partir des données JSON. Chaque carte de logement est rendue en utilisant
-//  le composant Card, ce qui permet une mise en page modulaire et réutilisable
-//  pour chaque logement dans la galerie.

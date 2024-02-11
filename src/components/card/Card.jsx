@@ -1,6 +1,9 @@
 import './Card.sass';
 import { Link } from 'react-router-dom';
-// Définition de mon composant Card qui prend en argument card
+
+/* Le composant Card est retourné dans un élément <li> qui représente chaque logement présent dans le composant Gallery
+évoqué précedemment. Il prend en propriéte "card" qui sera implémenté dans le composant Gallery. */
+
 const Card = ({ card }) => {
 	return (
 		<li className='card'>
@@ -18,3 +21,4 @@ const Card = ({ card }) => {
 };
 
 export default Card;
+

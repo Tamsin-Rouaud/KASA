@@ -10,26 +10,24 @@ import SlideShow from '../../components/slideShow/SlideShow';
 import Host from '../../components/host/Host';
 
 const ForRent = () => {
-	// Utilisation du hook useParams pour extraire l'ID de la route
-	const { id } = useParams();
-	// Utilisation du hook useNavigate pour obtenir une fonction de navigation
-	const navigate = useNavigate();
-	// Recherche de la carte correspondante dans les données en utilisant l'ID extrait
+	const { id } = useParams(); // J'utilise le  hook useParams pour extraire l'ID de la route
+	const navigate = useNavigate(); //ainsi que le hook useNavigate pour obtenir une fonction de navigation
+
+	// Je crée une constante selectedCard qui contient une fonction qui me permettra d'implementer les données passée en propriétés en utilisant l'ID extrait des données JSON
 	const selectedCard = jsonData.find((card) => card.id.toString() === id);
 
-	// Utilisation du hook useEffect pour déclencher une action après le rendu initial du composant
+	// J'utilise le hook useEffect pour déclencher la redirection vers "/NotFound" après le rendu initial du composant si selectedCard n'est pas trouvée
 	useEffect(() => {
-		// Si la carte n'est pas trouvée , redirection vers "/NotFound"
 		if (!selectedCard) {
 			navigate('/NotFound');
 		}
-		// Le tableau de dépendances [selectedCard, navigate] indique quand le useEffect doit être réexécuté
-	}, [selectedCard, navigate]);
-	// Si selectedCard est toujours introuvable, le composant ne rend rien (return null)
+	}, [selectedCard, navigate]); // Le tableau de dépendances [selectedCard, navigate] indique quand le useEffect doit être réexécuté
+
+	// Si selectedCard est toujours introuvable, redirection vers "/NotFound"
 	if (!selectedCard) {
-		return null;
+		return navigate('/NotFound');
 	}
-	// Retourne la structure JSX du composant ForRent avec les composants inclus
+
 	return (
 		<div className='forRent__container'>
 			<Header />

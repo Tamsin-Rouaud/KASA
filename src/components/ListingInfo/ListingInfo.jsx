@@ -1,5 +1,8 @@
 import './ListingInfo.sass';
 
+/* Le composant ListingInfo affiche les informations détaillées sur un logement, tel que son titre, son emplacement et les tags associés.
+Les données sont passées en tant que propriétés et seront récupérés dans la page ForRent ou ce composant sera appelé.*/
+
 const ListingInfo = ({ card }) => {
 	return (
 		<div className='listingInfo'>

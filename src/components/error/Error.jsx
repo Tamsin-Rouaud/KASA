@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import './Error.sass';
 
+// Le composant Error est simplement composé d'un conteneur, de 2 paragraphes et d'un Link permettant de retourner sur la Home
+
 const Error = () => {
 	return (
 		<div className='error'>
